@@ -3,6 +3,12 @@
    このファイルで最低限のレイアウト・見た目を再現する */
 
 * { box-sizing: border-box; }
+
+/* 本来はクリック等で開くポップアップ。JSが失われ常時表示になっていたので隠す */
+.modal-wrapper, [data-page-element="ModalContainer/V1"] {
+  display: none !important;
+}
+
 body {
   font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", sans-serif;
   line-height: 1.7;
