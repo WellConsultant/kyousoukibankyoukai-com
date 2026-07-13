@@ -66,6 +66,8 @@ a { color: inherit; }
   display: inline-block;
   cursor: pointer;
   text-decoration: none;
+  background: none;
+  border: none;
   margin: 0.8em 0;
 }
 .elButtonMain {
@@ -83,6 +85,13 @@ a { color: inherit; }
 }
 .elButtonMain:hover { opacity: 0.85; }
 .elButtonSpinner { display: none; }
+.elButtonSub {
+  display: block;
+  background: none;
+  color: #666;
+  font-size: 0.85em;
+  margin-top: 0.3em;
+}
 
 .col-inner, .innerContent {
   padding: 8px;
