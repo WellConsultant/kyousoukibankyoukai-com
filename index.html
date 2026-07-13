@@ -75,15 +75,23 @@
   }
 
   .icon-circle {
-    width: 56px;
-    height: 56px;
+    width: 52px;
+    height: 52px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 14px;
+    margin: 0 auto 16px;
+    box-shadow: 0 4px 10px rgba(20,20,50,0.12);
   }
-  .icon-circle svg { width: 28px; height: 28px; stroke: #fff; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .icon-circle svg { width: 24px; height: 24px; stroke: #fff; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+  .section-accent {
+    width: 40px;
+    height: 4px;
+    border-radius: 2px;
+    margin: 0 auto 18px;
+  }
 
   .cards {
     display: flex;
@@ -95,20 +103,21 @@
     flex: 1 1 250px;
     max-width: 280px;
     background: #fff;
-    border: 1px solid #d8d8e2;
+    border: 1px solid #e2e2ea;
+    border-top: 3px solid transparent;
     border-radius: 10px;
     padding: 28px 24px;
     text-align: center;
-    box-shadow: 0 4px 14px rgba(20,20,50,0.06);
+    box-shadow: 0 6px 20px rgba(20,20,50,0.07);
   }
   .card h3 { margin: 0 0 0.5em; font-size: 1.15em; }
   .card p { font-size: 0.95em; color: #555; margin: 0; }
 
-  /* セクションごとの色分け */
-  .theme-red    { background: #fdf1ef; }
-  .theme-navy   { background: #eef0f6; }
-  .theme-green  { background: #eef7f1; }
-  .theme-amber  { background: #fdf6ea; }
+  /* カード・アイコンの配色バリエーション（背景は白のまま、アクセントのみで区別） */
+  .theme-red    { border-top-color: #e0392c; }
+  .theme-navy   { border-top-color: #1a1a2e; }
+  .theme-green  { border-top-color: #2f9e6e; }
+  .theme-amber  { border-top-color: #c8901f; }
 
   .theme-red .icon-circle   { background: #e0392c; }
   .theme-navy .icon-circle  { background: #1a1a2e; }
@@ -121,14 +130,12 @@
     gap: 20px;
     justify-content: center;
     background: #fff;
-    border: 1px solid #d8d8e2;
+    border: 1px solid #e2e2ea;
     border-radius: 12px;
     padding: 40px 20px;
-    box-shadow: 0 4px 14px rgba(20,20,50,0.06);
+    box-shadow: 0 6px 20px rgba(20,20,50,0.07);
   }
   .stat { text-align: center; flex: 1 1 150px; }
-  .stat .icon-circle { width: 44px; height: 44px; }
-  .stat .icon-circle svg { width: 22px; height: 22px; }
   .stat .num { font-size: 2.2em; font-weight: bold; color: #e0392c; }
   .stat .label { font-size: 0.9em; color: #555; }
 
@@ -151,16 +158,13 @@
   .tag {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    background: #fff;
-    border: 1.5px solid #1a1a2e;
+    background: #f4f4f8;
     border-radius: 999px;
-    padding: 0.5em 1.2em;
+    padding: 0.55em 1.3em;
     font-size: 0.9em;
     color: #1a1a2e;
     font-weight: bold;
   }
-  .tag svg { width: 16px; height: 16px; stroke: #e0392c; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 
   .piece-cards .card { max-width: 300px; }
   .piece-red .icon-circle   { background: #e0392c; }
@@ -211,9 +215,9 @@
   </div>
 </div>
 
-<section class="theme-amber">
+<section>
   <div class="wrap">
-    <div class="icon-circle"><svg viewBox="0 0 24 24"><path d="M12 3 2 20h20L12 3Z"/><path d="M12 10v4"/><path d="M12 17h.01"/></svg></div>
+    <div class="section-accent" style="background:#c8901f;"></div>
     <h2 class="section-title">経営者の皆様、こんな「限界」を感じていませんか？</h2>
     <p class="lead-center">
       これらは、成長意欲の高い経営者ほどぶつかる「壁」です。しかし、多くの経営者はこの壁を
@@ -223,9 +227,9 @@
   </div>
 </section>
 
-<section class="theme-navy">
+<section>
   <div class="wrap">
-    <div class="icon-circle"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.35-9.5-8.5C1 8 2.5 4 6.5 4c2 0 3.5 1.2 4.5 2.8C12 5.2 13.5 4 15.5 4c4 0 5.5 4 4 7.5C19 15.65 12 20 12 20Z"/></svg></div>
+    <div class="section-accent" style="background:#1a1a2e;"></div>
     <h2 class="section-title">私たちは、あなたの痛みを誰よりも理解しています。</h2>
     <p class="lead-center">
       申し遅れました。ワンモアピース共創協会です。なぜ私たちが、皆様の抱える痛みをこれほどまでに
@@ -266,24 +270,21 @@
   </div>
 </section>
 
-<section class="theme-navy">
+<section>
   <div class="wrap">
+    <div class="section-accent" style="background:#1a1a2e;"></div>
     <h2 class="section-title">社会課題解決型・共創コミュニティ</h2>
     <div class="stats">
       <div class="stat">
-        <div class="icon-circle"><svg viewBox="0 0 24 24"><circle cx="8" cy="9" r="3"/><path d="M2 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.3"/><path d="M15.5 14.2c2.6.4 4.5 2.6 4.5 5.3"/></svg></div>
         <div class="num">2,987</div><div class="label">累計参加者数（2025年11月現在）</div>
       </div>
       <div class="stat">
-        <div class="icon-circle"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18"/><path d="M8 3v3M16 3v3"/></svg></div>
         <div class="num">50週</div><div class="label">毎週の勉強会サミット開催</div>
       </div>
       <div class="stat">
-        <div class="icon-circle"><svg viewBox="0 0 24 24"><path d="M3 12h7"/><path d="M14 12h7"/><path d="M7 8l-4 4 4 4"/><path d="M17 8l4 4-4 4"/></svg></div>
         <div class="num">19件</div><div class="label">共創プロジェクト</div>
       </div>
       <div class="stat">
-        <div class="icon-circle"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 9.3c0-1.1 1.3-1.9 3-1.9s3 .8 3 1.9-1.3 1.2-3 1.9-3 .8-3 1.9 1.3 1.9 3 1.9 3-.8 3-1.9"/></svg></div>
         <div class="num">90%</div><div class="label">補助金獲得率</div>
       </div>
     </div>
@@ -294,29 +295,29 @@
   <div class="wrap">
     <h2 class="section-title">私たちが解決したい社会課題</h2>
     <div class="tags">
-      <span class="tag"><svg viewBox="0 0 24 24"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M8 15l3-4 3 3 4-6"/></svg>物価高騰</span>
-      <span class="tag"><svg viewBox="0 0 24 24"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M8 8l3 4 3-3 4 6"/></svg>手取り減少</span>
-      <span class="tag"><svg viewBox="0 0 24 24"><circle cx="8" cy="9" r="3"/><path d="M2 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.3"/><path d="M15.5 14.2c2.6.4 4.5 2.6 4.5 5.3"/></svg>人手不足</span>
-      <span class="tag"><svg viewBox="0 0 24 24"><path d="M9 15l6-6"/><path d="M8 12l-2 2a3 3 0 0 0 4 4l2-2"/><path d="M16 12l2-2a3 3 0 0 0-4-4l-2 2"/></svg>後継者問題</span>
-      <span class="tag"><svg viewBox="0 0 24 24"><path d="M4 21V9l8-5 8 5v12"/><path d="M9 21v-6h6v6"/></svg>地方ビジネス</span>
-      <span class="tag"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-3.5 3.5-6 8-6s8 2.5 8 6"/><path d="M3 3l18 18"/></svg>不安定雇用</span>
-      <span class="tag"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/><path d="M8 15h.01M12 15h.01"/></svg>デジタル格差</span>
-      <span class="tag"><svg viewBox="0 0 24 24"><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/><circle cx="12" cy="12" r="3"/></svg>生産性の低下・省力化</span>
-      <span class="tag"><svg viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20"/></svg>リスキニング</span>
-      <span class="tag"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h.01M15 9h.01M8 15c1 1 2 1.5 4 1.5s3-.5 4-1.5"/></svg>個人のAI活用</span>
-      <span class="tag"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h.01M15 9h.01M8 15c1 1 2 1.5 4 1.5s3-.5 4-1.5"/></svg>事業主のAI活用</span>
-      <span class="tag"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg>DX推進</span>
-      <span class="tag"><svg viewBox="0 0 24 24"><path d="M12 3v18"/><path d="M5 8h14"/><path d="M5 8l-3 6a3 3 0 0 0 6 0l-3-6Z"/><path d="M19 8l-3 6a3 3 0 0 0 6 0l-3-6Z"/></svg>ワークライフバランス</span>
-      <span class="tag"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.35-9.5-8.5C1 8 2.5 4 6.5 4c2 0 3.5 1.2 4.5 2.8C12 5.2 13.5 4 15.5 4c4 0 5.5 4 4 7.5C19 15.65 12 20 12 20Z"/></svg>育児・介護離職</span>
-      <span class="tag"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-3.5 3.5-6 8-6s8 2.5 8 6"/></svg>女性の活躍</span>
-      <span class="tag"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-3.5 3.5-6 8-6s8 2.5 8 6"/><path d="M9 5.5c.6-1 1.7-1.5 3-1.5"/></svg>シニア人材の雇用</span>
+      <span class="tag">物価高騰</span>
+      <span class="tag">手取り減少</span>
+      <span class="tag">人手不足</span>
+      <span class="tag">後継者問題</span>
+      <span class="tag">地方ビジネス</span>
+      <span class="tag">不安定雇用</span>
+      <span class="tag">デジタル格差</span>
+      <span class="tag">生産性の低下・省力化</span>
+      <span class="tag">リスキニング</span>
+      <span class="tag">個人のAI活用</span>
+      <span class="tag">事業主のAI活用</span>
+      <span class="tag">DX推進</span>
+      <span class="tag">ワークライフバランス</span>
+      <span class="tag">育児・介護離職</span>
+      <span class="tag">女性の活躍</span>
+      <span class="tag">シニア人材の雇用</span>
     </div>
   </div>
 </section>
 
-<section class="theme-green">
+<section>
   <div class="wrap">
-    <div class="icon-circle"><svg viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20"/></svg></div>
+    <div class="section-accent" style="background:#2f9e6e;"></div>
     <h2 class="section-title">ワンモアピース共創協会とは？</h2>
     <p class="lead-center">
       今の日本には、多くの素晴らしいアイデアや技術が、適切なパートナーや環境に出会えずに眠っています。
@@ -331,7 +332,7 @@
 
 <section>
   <div class="wrap">
-    <div class="icon-circle" style="background:#1a1a2e;"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.35-9.5-8.5C1 8 2.5 4 6.5 4c2 0 3.5 1.2 4.5 2.8C12 5.2 13.5 4 15.5 4c4 0 5.5 4 4 7.5C19 15.65 12 20 12 20Z"/></svg></div>
+    <div class="section-accent" style="background:#e0392c;"></div>
     <h2 class="section-title">私たちの理念</h2>
     <p class="lead-center">
       私たち、ワンモアピース共創協会は、「One More Piece for One More Peace
