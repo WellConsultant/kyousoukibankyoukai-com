@@ -1,0 +1,104 @@
+/* kyousoukibankyoukai.com 復元用 簡易スタイル
+   ClickFunnels本来のCSSがアーカイブされていないため、
+   このファイルで最低限のレイアウト・見た目を再現する */
+
+* { box-sizing: border-box; }
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", sans-serif;
+  line-height: 1.7;
+  color: #222;
+  margin: 0;
+  overflow-x: hidden;
+}
+img { max-width: 100%; height: auto; }
+a { color: inherit; }
+
+.container, .containerInnerV2, .fullContainer {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -12px;
+}
+.row > [class*="col-"] {
+  padding: 0 12px;
+  width: 100%;
+}
+.col-md-12 { flex: 0 0 100%; max-width: 100%; }
+.col-md-9  { flex: 0 0 75%;  max-width: 75%; }
+.col-md-4  { flex: 0 0 33.333%; max-width: 33.333%; }
+.col_left, .col_right { flex: 1 1 300px; }
+
+@media (max-width: 767px) {
+  .row > [class*="col-"] { flex: 0 0 100% !important; max-width: 100% !important; }
+}
+
+.elHeadline, .elHeadlineWrapper {
+  font-size: 1.9em;
+  font-weight: bold;
+  line-height: 1.4;
+  margin: 0.6em 0 0.3em;
+}
+.elSubheadline, .elSubheadlineWrapper {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin: 0.3em 0 0.6em;
+  color: #444;
+}
+.elParagraph, .elParagraphWrapper {
+  font-size: 1em;
+  margin: 0.6em 0;
+}
+.elBulletListTextWrapper {
+  margin: 0.4em 0;
+  padding-left: 0.4em;
+}
+.elImage, .elImageWrapper, .de-image-block {
+  margin: 0.8em 0;
+  text-align: center;
+}
+
+.elButton, .elBTN {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0.8em 0;
+}
+.elButtonMain {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  background: #e0392c;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 0.9em 1.8em;
+  border-radius: 6px;
+  transition: opacity 0.2s;
+}
+.elButtonMain:hover { opacity: 0.85; }
+.elButtonSpinner { display: none; }
+
+.col-inner, .innerContent {
+  padding: 8px;
+}
+
+.borderHolder {
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], textarea, select {
+  width: 100%;
+  padding: 0.7em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  margin: 0.3em 0 0.8em;
+}
