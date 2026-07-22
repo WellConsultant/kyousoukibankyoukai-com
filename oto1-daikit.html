@@ -93,6 +93,14 @@
             border-top: 1px solid #ddd;
             padding-top: 20px;
         }
+        .privacy-modal-overlay{display:none;position:fixed;inset:0;background:#000000a6;z-index:9999;align-items:center;justify-content:center;padding:20px}
+        .privacy-modal-overlay.is-open{display:flex}
+        .privacy-modal-box{background:#fff;color:#222;width:100%;max-width:640px;max-height:82vh;overflow-y:auto;padding:36px 32px;border-radius:10px;position:relative;line-height:1.8;text-align:left}
+        .privacy-modal-box h2{margin:0 0 16px;font-size:20px;color:#0056b3}
+        .privacy-modal-box h3{margin:22px 0 6px;font-size:15px;color:#0056b3}
+        .privacy-modal-box p{margin:0 0 10px;font-size:13px}
+        .privacy-modal-close{position:absolute;top:12px;right:14px;background:none;border:0;font-size:26px;line-height:1;color:#888;cursor:pointer}
+        .privacy-modal-date{color:#888;font-size:11px;margin-top:24px}
     </style>
 </head>
 <body>
@@ -175,10 +183,37 @@
 
     <footer>
         <p>情報主催者情報：<a href="https://fp-1.info/hojokin" target="_blank" rel="noopener">https://fp-1.info/hojokin</a></p>
+        <p><a href="#" onclick="openPrivacyModal(event)">プライバシーポリシー</a></p>
         <p>© 補助金パートナーミーティング All Rights Reserved.</p>
     </footer>
 
 </div>
+
+<div id="privacyModal" class="privacy-modal-overlay" onclick="if(event.target===this)closePrivacyModal()">
+    <div class="privacy-modal-box">
+        <button type="button" class="privacy-modal-close" onclick="closePrivacyModal()" aria-label="閉じる">×</button>
+        <h2>プライバシーポリシー</h2>
+        <p>一般社団法人ワンモアピース共創協会（以下「当団体」）は、本サイトでお預かりする個人情報を以下の方針に基づき適切に取り扱います。</p>
+        <h3>1. 取得する情報</h3>
+        <p>お申し込み・お問い合わせの際にご入力いただくお名前、メールアドレス等。</p>
+        <h3>2. 利用目的</h3>
+        <p>資料・情報のご提供、お問い合わせへの対応、当団体からのご案内のために利用します。</p>
+        <h3>3. 第三者提供</h3>
+        <p>法令に基づく場合を除き、ご本人の同意なく第三者へ提供することはありません。</p>
+        <h3>4. 委託</h3>
+        <p>業務の一部を外部に委託する場合は、委託先に対して適切な監督を行います。</p>
+        <h3>5. 開示・訂正・削除等のご請求</h3>
+        <p>ご自身の個人情報の開示・訂正・削除等をご希望の場合は、下記窓口までご連絡ください。</p>
+        <h3>6. お問い合わせ窓口</h3>
+        <p>一般社団法人ワンモアピース共創協会<br>公式サイト：<a href="https://kyousoukibankyoukai.com/" target="_blank" rel="noopener">https://kyousoukibankyoukai.com/</a></p>
+        <p class="privacy-modal-date">制定日：2026年7月22日</p>
+    </div>
+</div>
+
+<script>
+function openPrivacyModal(e){if(e)e.preventDefault();document.getElementById('privacyModal').classList.add('is-open');}
+function closePrivacyModal(){document.getElementById('privacyModal').classList.remove('is-open');}
+</script>
 
 </body>
 </html>
