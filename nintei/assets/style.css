@@ -19,3 +19,5 @@
 .exam-fee strong .tax-label{font-size:15px;font-weight:500;white-space:nowrap}
 
 #schedule{scroll-margin-top:100px}.reservation-frame{width:100%;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:white}.reservation-frame iframe{display:block;width:100%;min-height:760px;border:0}
+
+.exam-eligibility-card{padding:24px 28px;margin:25px 0;background:var(--paper);border-left:3px solid var(--gold)}.exam-eligibility-card h3{margin-top:0}.exam-eligibility-card li{margin:8px 0}.exam-flow p{line-height:1.9}.exam-flow h3{white-space:nowrap}
